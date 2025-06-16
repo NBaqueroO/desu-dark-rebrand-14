@@ -5,38 +5,32 @@ const services = [
   {
     icon: Target,
     title: "Estrategias y embudos de ventas",
-    description: "Desarrollamos estrategias personalizadas de marketing que maximizan tu conversión y ROI.",
-    features: ["Análisis de mercado", "Segmentación precisa", "Optimización de conversión", "ROI mejorado"]
+    description: "Desarrollamos estrategias personalizadas de marketing.",
   },
   {
     icon: Globe,
     title: "Creación de videos, imágenes, fotografía",
-    description: "Contenido visual profesional que conecta con tu audiencia y fortalece tu marca.",
-    features: ["Videos promocionales", "Fotografía corporativa", "Diseño gráfico", "Contenido para redes"]
+    description: "Contenido visual profesional para tu marca.",
   },
   {
     icon: Mail,
     title: "Email marketing y CRM",
-    description: "Automatización de marketing por email y gestión completa de relaciones con clientes.",
-    features: ["Campañas automatizadas", "Segmentación avanzada", "CRM integrado", "Análisis detallado"]
+    description: "Automatización de marketing por email.",
   },
   {
     icon: Smartphone,
     title: "WhatsApp Business",
-    description: "Estrategias de comunicación directa con tus clientes a través de WhatsApp Business.",
-    features: ["Automatización", "Catálogos digitales", "Atención al cliente", "Marketing directo"]
+    description: "Estrategias de comunicación directa con tus clientes.",
   },
   {
     icon: Target,
     title: "Expertos en LinkedIn",
-    description: "Posicionamiento profesional y generación de leads B2B a través de LinkedIn.",
-    features: ["Perfil optimizado", "Networking estratégico", "Content marketing", "Lead generation"]
+    description: "Posicionamiento profesional y generación de leads B2B.",
   },
   {
     icon: Megaphone,
     title: "Google y Facebook Ads",
-    description: "Campañas publicitarias efectivas en las principales plataformas digitales.",
-    features: ["Google Ads", "Facebook Ads", "Instagram Ads", "Optimización ROI"]
+    description: "Campañas publicitarias efectivas.",
   }
 ];
 
@@ -52,8 +46,7 @@ const ServicesSection = () => {
             Servicios Especializados
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ofrecemos una gama completa de servicios de marketing digital diseñados 
-            para impulsar tu negocio al siguiente nivel.
+            Ofrecemos una gama completa de servicios de marketing digital.
           </p>
         </div>
 
@@ -73,19 +66,6 @@ const ServicesSection = () => {
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {service.description}
               </p>
-
-              <ul className="space-y-2">
-                {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-gray-400">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              <button className="mt-6 text-orange-500 hover:text-orange-400 font-semibold transition-colors flex items-center gap-2">
-                Ver detalle de los servicios →
-              </button>
             </div>
           ))}
         </div>

@@ -4,7 +4,7 @@ import CompanyCarousel from "./CompanyCarousel";
 
 const AboutSection = () => {
   return (
-    <section id="nosotros" className="py-20 bg-gray-900">
+    <section id="nosotros" className="py-20 bg-gray-950">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-block bg-orange-500 text-white px-4 py-2 rounded-lg mb-6 font-semibold">
@@ -116,18 +116,12 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-3xl p-8 border border-gray-700 shadow-lg">
-            <h4 className="text-2xl font-bold text-white mb-6 text-center">
-              OBJETIVOS DE DESARROLLO SOSTENIBLE
-            </h4>
-            <div className="grid grid-cols-5 gap-4">
-              {[4, 5, 8, 10, 17].map((num) => (
-                <div key={num} className="bg-gray-700 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-orange-500 mb-2">{num}</div>
-                  <div className="text-xs text-gray-300">ODS {num}</div>
-                </div>
-              ))}
-            </div>
+          <div className="bg-gray-800 rounded-3xl p-8 border border-gray-700 shadow-lg relative overflow-hidden">
+            <img 
+              src="/lovable-uploads/8cc66fce-7ef7-4c4b-8969-e8a2a30a0803.png" 
+              alt="Objetivos de Desarrollo Sostenible - ODS 4, 5, 8, 10, 17" 
+              className="w-full h-auto rounded-lg"
+            />
           </div>
         </div>
       </div>

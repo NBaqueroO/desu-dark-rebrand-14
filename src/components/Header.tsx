@@ -20,21 +20,18 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className="text-gray-700 hover:text-orange-500 transition-colors">
+            <a href="https://desufuturo.com" className="text-gray-700 hover:text-orange-500 transition-colors">
               Inicio
             </a>
-            <a href="#servicios" className="text-gray-700 hover:text-orange-500 transition-colors">
-              Servicios
+            <a href="https://desufuturo.com/es/connect" className="text-gray-700 hover:text-orange-500 transition-colors">
+              Connect
             </a>
-            <a href="#nosotros" className="text-gray-700 hover:text-orange-500 transition-colors">
-              Nosotros
+            <a href="https://desufuturo.com/es/planeacion-financiera" className="text-gray-700 hover:text-orange-500 transition-colors">
+              Planeación Financiera
             </a>
-            <a href="#contacto" className="text-gray-700 hover:text-orange-500 transition-colors">
-              Contacto
+            <a href="https://desufuturo.com/es/marketing" className="text-gray-700 hover:text-orange-500 transition-colors">
+              Marketing
             </a>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors">
-              Consulta Gratis
-            </button>
           </nav>
 
           {/* Mobile menu button */}
@@ -50,21 +47,18 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <a href="#inicio" className="text-gray-700 hover:text-orange-500 transition-colors">
+              <a href="https://desufuturo.com" className="text-gray-700 hover:text-orange-500 transition-colors">
                 Inicio
               </a>
-              <a href="#servicios" className="text-gray-700 hover:text-orange-500 transition-colors">
-                Servicios
+              <a href="https://desufuturo.com/es/connect" className="text-gray-700 hover:text-orange-500 transition-colors">
+                Connect
               </a>
-              <a href="#nosotros" className="text-gray-700 hover:text-orange-500 transition-colors">
-                Nosotros
+              <a href="https://desufuturo.com/es/planeacion-financiera" className="text-gray-700 hover:text-orange-500 transition-colors">
+                Planeación Financiera
               </a>
-              <a href="#contacto" className="text-gray-700 hover:text-orange-500 transition-colors">
-                Contacto
+              <a href="https://desufuturo.com/es/marketing" className="text-gray-700 hover:text-orange-500 transition-colors">
+                Marketing
               </a>
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors w-fit">
-                Consulta Gratis
-              </button>
             </div>
           </nav>
         )}

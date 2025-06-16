@@ -1,5 +1,5 @@
 
-import { Instagram, Youtube, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Youtube, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -29,7 +29,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="bg-gray-800 hover:bg-orange-500 p-3 rounded-lg transition-colors"
               >
-                <Instagram className="w-5 h-5 text-white" />
+                <img src="/lovable-uploads/de9184b9-c3ba-4695-bc64-2352f978acfc.png" alt="Instagram" className="w-5 h-5" />
               </a>
               <a
                 href="https://www.youtube.com/channel/UCjKej9TBPmAM5SC5ykpPCig"
@@ -37,7 +37,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="bg-gray-800 hover:bg-orange-500 p-3 rounded-lg transition-colors"
               >
-                <Youtube className="w-5 h-5 text-white" />
+                <img src="/lovable-uploads/a87cf60f-929d-44c0-8d9c-2e03ed1f22f8.png" alt="YouTube" className="w-5 h-5" />
               </a>
               <a
                 href="https://www.linkedin.com/company/desufuturo"
@@ -45,9 +45,36 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="bg-gray-800 hover:bg-orange-500 p-3 rounded-lg transition-colors"
               >
-                <Linkedin className="w-5 h-5 text-white" />
+                <img src="/lovable-uploads/81845d40-1a85-4c14-b99e-9080676203bc.png" alt="LinkedIn" className="w-5 h-5" />
               </a>
             </div>
+          </div>
+
+          {/* Navigation Menu */}
+          <div>
+            <h3 className="text-white font-bold text-lg mb-6">Menú</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="https://desufuturo.com" className="text-gray-300 hover:text-orange-500 transition-colors">
+                  Inicio
+                </a>
+              </li>
+              <li>
+                <a href="https://desufuturo.com/es/connect" className="text-gray-300 hover:text-orange-500 transition-colors">
+                  Connect
+                </a>
+              </li>
+              <li>
+                <a href="https://desufuturo.com/es/planeacion-financiera" className="text-gray-300 hover:text-orange-500 transition-colors">
+                  Planeación Financiera
+                </a>
+              </li>
+              <li>
+                <a href="https://desufuturo.com/es/marketing" className="text-gray-300 hover:text-orange-500 transition-colors">
+                  Marketing
+                </a>
+              </li>
+            </ul>
           </div>
 
           {/* Services */}
@@ -85,31 +112,6 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="text-white font-bold text-lg mb-6">Contacto</h3>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-orange-500" />
-                <span className="text-gray-300">info@desufuturo.com</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-orange-500" />
-                <span className="text-gray-300">+57 (300) 000-0000</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-orange-500" />
-                <span className="text-gray-300">Medellín, Colombia</span>
-              </li>
-            </ul>
-
-            <div className="mt-6">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                Consulta Gratis
-              </button>
-            </div>
           </div>
         </div>
       </div>

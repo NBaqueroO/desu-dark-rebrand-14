@@ -1,7 +1,37 @@
 
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { useState } from "react";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const subject = encodeURIComponent('Consulta desde De Su Futuro');
+    const body = encodeURIComponent(`
+Nombre: ${formData.name}
+Email: ${formData.email}
+Teléfono: ${formData.phone}
+Empresa: ${formData.company}
+Mensaje: ${formData.message}
+    `);
+    
+    window.location.href = `mailto:info@desufuturo.com?subject=${subject}&body=${body}`;
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value
+    });
+  };
+
   return (
     <section id="contacto" className="py-20 bg-black">
       <div className="container mx-auto px-4">
@@ -10,17 +40,17 @@ const ContactSection = () => {
             CONTACTO
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            ¿Listo para transformar tu negocio?
+            ¿Quieres entrar a nuestras sesiones gratuitas?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Contáctanos hoy y descubre cómo podemos ayudarte a alcanzar tus objetivos de marketing digital.
+            Donde te enseñaremos a vender más y participar en eventos exclusivos de Networking con
+            nuestros clientes? O tienes alguna recomendación (PQR), llena este formulario y te estaremos contactando.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
+        <div className="max-w-2xl mx-auto">
           <div className="bg-gray-900 rounded-3xl p-8 border border-gray-700">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-white font-semibold mb-2">
@@ -29,8 +59,11 @@ const ContactSection = () => {
                   <input
                     type="text"
                     id="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none"
                     placeholder="Tu nombre completo"
+                    required
                   />
                 </div>
                 <div>
@@ -40,8 +73,11 @@ const ContactSection = () => {
                   <input
                     type="email"
                     id="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none"
                     placeholder="tu@email.com"
+                    required
                   />
                 </div>
               </div>
@@ -53,6 +89,8 @@ const ContactSection = () => {
                 <input
                   type="tel"
                   id="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none"
                   placeholder="+57 300 000 0000"
                 />
@@ -65,6 +103,8 @@ const ContactSection = () => {
                 <input
                   type="text"
                   id="company"
+                  value={formData.company}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none"
                   placeholder="Nombre de tu empresa"
                 />
@@ -77,8 +117,11 @@ const ContactSection = () => {
                 <textarea
                   id="message"
                   rows={5}
+                  value={formData.message}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none resize-none"
                   placeholder="Cuéntanos sobre tu proyecto y cómo podemos ayudarte..."
+                  required
                 ></textarea>
               </div>
 
@@ -88,68 +131,11 @@ const ContactSection = () => {
               >
                 Enviar Mensaje
               </button>
-            </form>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <div className="bg-gray-900 rounded-3xl p-8 border border-gray-700">
-              <h3 className="text-2xl font-bold text-white mb-6">Información de Contacto</h3>
               
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="bg-orange-500/10 p-3 rounded-lg">
-                    <Mail className="w-6 h-6 text-orange-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white mb-1">Email</h4>
-                    <p className="text-gray-300">info@desufuturo.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="bg-orange-500/10 p-3 rounded-lg">
-                    <Phone className="w-6 h-6 text-orange-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white mb-1">Teléfono</h4>
-                    <p className="text-gray-300">+57 (300) 000-0000</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="bg-orange-500/10 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-orange-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white mb-1">Ubicación</h4>
-                    <p className="text-gray-300">Medellín, Colombia</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="bg-orange-500/10 p-3 rounded-lg">
-                    <Clock className="w-6 h-6 text-orange-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white mb-1">Horarios</h4>
-                    <p className="text-gray-300">Lun - Vie: 8:00 AM - 6:00 PM</p>
-                    <p className="text-gray-300">Sáb: 9:00 AM - 2:00 PM</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Card */}
-            <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-8 text-white text-center">
-              <h3 className="text-2xl font-bold mb-4">¿Necesitas una respuesta rápida?</h3>
-              <p className="mb-6 opacity-90">
-                Programa una consulta gratuita de 30 minutos con nuestro equipo de expertos.
+              <p className="text-gray-400 text-sm text-center">
+                Al enviar este formulario, se abrirá tu aplicación de correo con los datos completados.
               </p>
-              <button className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Agendar Consulta
-              </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
