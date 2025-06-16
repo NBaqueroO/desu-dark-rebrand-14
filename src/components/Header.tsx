@@ -11,10 +11,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="text-2xl font-bold">
-              <span className="text-black">desu</span>
-              <span className="text-orange-500">futuro</span>
-            </div>
+            <img 
+              src="/lovable-uploads/7a0ceaae-5c95-4828-92fe-bfc8d48f729f.png" 
+              alt="De Su Futuro" 
+              className="h-8"
+            />
           </div>
 
           {/* Desktop Navigation */}

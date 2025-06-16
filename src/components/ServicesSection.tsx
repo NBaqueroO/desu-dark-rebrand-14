@@ -42,16 +42,16 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="servicios" className="py-20 bg-white">
+    <section id="servicios" className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-block bg-orange-500 text-white px-4 py-2 rounded-lg mb-6 font-semibold">
             NUESTROS SERVICIOS
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Servicios Especializados
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ofrecemos una gama completa de servicios de marketing digital diseñados 
             para impulsar tu negocio al siguiente nivel.
           </p>
@@ -61,29 +61,29 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-xl p-8 hover:border-orange-500 hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105 group"
+              className="bg-gray-900 border border-gray-700 rounded-xl p-8 hover:border-orange-500 hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105 group"
             >
               <div className="flex items-center mb-6">
                 <div className="bg-orange-500/10 p-3 rounded-lg mr-4 group-hover:bg-orange-500/20 transition-colors">
                   <service.icon className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-bold text-black">{service.title}</h3>
+                <h3 className="text-xl font-bold text-white">{service.title}</h3>
               </div>
               
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed">
                 {service.description}
               </p>
 
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-gray-500">
+                  <li key={idx} className="flex items-center text-gray-400">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                     {feature}
                   </li>
                 ))}
               </ul>
 
-              <button className="mt-6 text-orange-500 hover:text-orange-600 font-semibold transition-colors flex items-center gap-2">
+              <button className="mt-6 text-orange-500 hover:text-orange-400 font-semibold transition-colors flex items-center gap-2">
                 Ver detalle de los servicios →
               </button>
             </div>

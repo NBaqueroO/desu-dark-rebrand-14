@@ -64,15 +64,17 @@ const HeroSection = () => {
           <div className="relative">
             <div className="bg-gradient-to-br from-orange-500/10 to-gray-900/50 rounded-3xl p-8 backdrop-blur-sm border border-gray-700">
               <div className="bg-black/50 rounded-2xl p-6 space-y-4">
-                <div className="aspect-video bg-gray-800 rounded-lg flex items-center justify-center">
-                  <a 
-                    href="https://youtu.be/rFQvnQ4Nb5U" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-16 h-16 bg-orange-500 rounded-full hover:bg-orange-600 transition-colors"
-                  >
-                    <Play size={24} className="text-white ml-1" />
-                  </a>
+                <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/rFQvnQ4Nb5U"
+                    title="Una agencia exclusiva De su futuro. #BN..."
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="rounded-lg"
+                  ></iframe>
                 </div>
                 <p className="text-white text-center font-semibold">
                   Una agencia exclusiva De su futuro. #BN...

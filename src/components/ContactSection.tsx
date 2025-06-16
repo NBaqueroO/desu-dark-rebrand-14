@@ -1,123 +1,155 @@
 
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useState } from "react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    lastName: "",
-    email: "",
-    bniMember: "",
-    message: ""
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Aquí iría la lógica para enviar el formulario
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
     <section id="contacto" className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
+          <div className="inline-block bg-orange-500 text-white px-4 py-2 rounded-lg mb-6 font-semibold">
+            CONTACTO
+          </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            ¿Quieres entrar a nuestras sesiones gratuitas, donde te enseñaremos a vender más y participar 
-            en eventos exclusivos de Networking con nuestros clientes?
+            ¿Listo para transformar tu negocio?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            O tienes alguna recomendación (PQR), llena este formulario y te estaremos contactando.
+            Contáctanos hoy y descubre cómo podemos ayudarte a alcanzar tus objetivos de marketing digital.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Form */}
-          <div className="bg-white rounded-xl p-8 shadow-2xl">
-            <div className="text-center mb-8">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Contáctanos
-              </button>
-            </div>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="bg-gray-900 rounded-3xl p-8 border border-gray-700">
+            <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-gray-700 mb-2">
-                    Name <span className="text-red-500">*</span>
+                  <label htmlFor="name" className="block text-white font-semibold mb-2">
+                    Nombre *
                   </label>
                   <input
                     type="text"
                     id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:border-orange-500 focus:outline-none transition-colors"
-                    required
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none"
+                    placeholder="Tu nombre completo"
                   />
                 </div>
-
                 <div>
-                  <label htmlFor="lastName" className="block text-gray-700 mb-2">Last name</label>
+                  <label htmlFor="email" className="block text-white font-semibold mb-2">
+                    Email *
+                  </label>
                   <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:border-orange-500 focus:outline-none transition-colors"
+                    type="email"
+                    id="email"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none"
+                    placeholder="tu@email.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-gray-700 mb-2">
-                  Email <span className="text-red-500">*</span>
+                <label htmlFor="phone" className="block text-white font-semibold mb-2">
+                  Teléfono
                 </label>
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:border-orange-500 focus:outline-none transition-colors"
-                  required
+                  type="tel"
+                  id="phone"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none"
+                  placeholder="+57 300 000 0000"
                 />
               </div>
 
               <div>
-                <label htmlFor="bniMember" className="block text-gray-700 mb-2">Are you a BNI Member?</label>
+                <label htmlFor="company" className="block text-white font-semibold mb-2">
+                  Empresa
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none"
+                  placeholder="Nombre de tu empresa"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-white font-semibold mb-2">
+                  Mensaje *
+                </label>
                 <textarea
-                  id="bniMember"
-                  name="bniMember"
-                  value={formData.bniMember}
-                  onChange={handleChange}
-                  rows={4}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:border-orange-500 focus:outline-none transition-colors resize-none"
+                  id="message"
+                  rows={5}
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none resize-none"
+                  placeholder="Cuéntanos sobre tu proyecto y cómo podemos ayudarte..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105"
               >
-                Send
+                Enviar Mensaje
               </button>
-
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <p className="text-sm text-gray-600 flex items-center gap-2">
-                  <span className="text-orange-500">🚀</span>
-                  <span className="text-orange-500 underline cursor-pointer">Crea tus propios formularios gratuitos</span>
-                  <span>para generar leads desde tu sitio web.</span>
-                </p>
-              </div>
             </form>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <div className="bg-gray-900 rounded-3xl p-8 border border-gray-700">
+              <h3 className="text-2xl font-bold text-white mb-6">Información de Contacto</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-orange-500/10 p-3 rounded-lg">
+                    <Mail className="w-6 h-6 text-orange-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">Email</h4>
+                    <p className="text-gray-300">info@desufuturo.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-orange-500/10 p-3 rounded-lg">
+                    <Phone className="w-6 h-6 text-orange-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">Teléfono</h4>
+                    <p className="text-gray-300">+57 (300) 000-0000</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-orange-500/10 p-3 rounded-lg">
+                    <MapPin className="w-6 h-6 text-orange-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">Ubicación</h4>
+                    <p className="text-gray-300">Medellín, Colombia</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-orange-500/10 p-3 rounded-lg">
+                    <Clock className="w-6 h-6 text-orange-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">Horarios</h4>
+                    <p className="text-gray-300">Lun - Vie: 8:00 AM - 6:00 PM</p>
+                    <p className="text-gray-300">Sáb: 9:00 AM - 2:00 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Card */}
+            <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-8 text-white text-center">
+              <h3 className="text-2xl font-bold mb-4">¿Necesitas una respuesta rápida?</h3>
+              <p className="mb-6 opacity-90">
+                Programa una consulta gratuita de 30 minutos con nuestro equipo de expertos.
+              </p>
+              <button className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Agendar Consulta
+              </button>
+            </div>
           </div>
         </div>
       </div>
