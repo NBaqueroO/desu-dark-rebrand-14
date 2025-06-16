@@ -5,8 +5,9 @@ import { useState } from "react";
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
+    lastName: "",
     email: "",
-    phone: "",
+    bniMember: "",
     message: ""
   });
 
@@ -24,128 +25,98 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contacto" className="py-20 bg-gray-800">
+    <section id="contacto" className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            ¿Listo Para Comenzar?
+            ¿Quieres entrar a nuestras sesiones gratuitas, donde te enseñaremos a vender más y participar 
+            en eventos exclusivos de Networking con nuestros clientes?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Contáctanos hoy mismo y descubre cómo podemos transformar tu presencia digital.
+            O tienes alguna recomendación (PQR), llena este formulario y te estaremos contactando.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-8">Información de Contacto</h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-blue-600/20 p-3 rounded-lg">
-                  <Mail className="w-6 h-6 text-blue-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white mb-1">Email</h4>
-                  <p className="text-gray-300">hola@desufuturo.com</p>
-                  <p className="text-gray-300">info@desufuturo.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="bg-blue-600/20 p-3 rounded-lg">
-                  <Phone className="w-6 h-6 text-blue-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white mb-1">Teléfono</h4>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
-                  <p className="text-gray-300">+1 (555) 987-6543</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="bg-blue-600/20 p-3 rounded-lg">
-                  <MapPin className="w-6 h-6 text-blue-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white mb-1">Oficina</h4>
-                  <p className="text-gray-300">123 Digital Avenue</p>
-                  <p className="text-gray-300">Marketing District, MD 12345</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-12 p-6 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl border border-gray-700">
-              <h4 className="font-bold text-white mb-2">Consulta Gratuita</h4>
-              <p className="text-gray-300 text-sm">
-                Agenda una consulta gratuita de 30 minutos para discutir tus objetivos de marketing digital.
-              </p>
-            </div>
-          </div>
-
+        <div className="max-w-4xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-gray-900/50 border border-gray-700 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-6">Envíanos un Mensaje</h3>
+          <div className="bg-white rounded-xl p-8 shadow-2xl">
+            <div className="text-center mb-8">
+              <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Contáctanos
+              </button>
+            </div>
             
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-gray-300 mb-2">Nombre Completo</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none transition-colors"
-                  required
-                />
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-gray-700 mb-2">
+                    Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:border-orange-500 focus:outline-none transition-colors"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="lastName" className="block text-gray-700 mb-2">Last name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:border-orange-500 focus:outline-none transition-colors"
+                  />
+                </div>
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-gray-300 mb-2">Email</label>
+                <label htmlFor="email" className="block text-gray-700 mb-2">
+                  Email <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none transition-colors"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:border-orange-500 focus:outline-none transition-colors"
                   required
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-gray-300 mb-2">Teléfono</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none transition-colors"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-gray-300 mb-2">Mensaje</label>
+                <label htmlFor="bniMember" className="block text-gray-700 mb-2">Are you a BNI Member?</label>
                 <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
+                  id="bniMember"
+                  name="bniMember"
+                  value={formData.bniMember}
                   onChange={handleChange}
-                  rows={5}
-                  className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-blue-500 focus:outline-none transition-colors resize-none"
-                  required
+                  rows={4}
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:border-orange-500 focus:outline-none transition-colors resize-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
-                <Send size={20} />
-                Enviar Mensaje
+                Send
               </button>
+
+              <div className="mt-6 pt-6 border-t border-gray-200">
+                <p className="text-sm text-gray-600 flex items-center gap-2">
+                  <span className="text-orange-500">🚀</span>
+                  <span className="text-orange-500 underline cursor-pointer">Crea tus propios formularios gratuitos</span>
+                  <span>para generar leads desde tu sitio web.</span>
+                </p>
+              </div>
             </form>
           </div>
         </div>
