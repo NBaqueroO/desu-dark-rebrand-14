@@ -105,18 +105,18 @@ const AboutSection = () => {
 
         {/* Sustainability Section */}
         <div className="mt-20 grid lg:grid-cols-2 gap-16 items-center">
-          <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-8 text-white">
+          <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-6 text-white">
             <div className="text-center">
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lightbulb className="w-10 h-10 text-white" />
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Lightbulb className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-xl font-bold mb-4">
+              <h4 className="text-lg font-bold mb-4">
                 SOMOS UNA EMPRESA COMPROMETIDA CON LOS OBJETIVOS DE DESARROLLO SOSTENIBLE (ODS)
               </h4>
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-3xl p-8 border border-gray-700 shadow-lg relative overflow-hidden">
+          <div className="bg-gray-800 rounded-3xl p-4 border border-gray-700 shadow-lg relative overflow-hidden">
             <img 
               src="/lovable-uploads/8cc66fce-7ef7-4c4b-8969-e8a2a30a0803.png" 
               alt="Objetivos de Desarrollo Sostenible - ODS 4, 5, 8, 10, 17" 

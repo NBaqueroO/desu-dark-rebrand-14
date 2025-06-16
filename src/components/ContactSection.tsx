@@ -13,16 +13,17 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const subject = encodeURIComponent('Consulta desde De Su Futuro');
-    const body = encodeURIComponent(`
-Nombre: ${formData.name}
+    const subject = encodeURIComponent('Pag-Web Marketing');
+    const body = encodeURIComponent(`Hola me llamo ${formData.name}, soy de la empresa ${formData.company || 'N/A'}.
+
+${formData.message}
+
+Datos de contacto:
 Email: ${formData.email}
-Teléfono: ${formData.phone}
-Empresa: ${formData.company}
-Mensaje: ${formData.message}
+Teléfono: ${formData.phone || 'N/A'}
     `);
     
-    window.location.href = `mailto:info@desufuturo.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:gerencia@desufuturo.com?subject=${subject}&body=${body}`;
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

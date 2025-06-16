@@ -15,8 +15,8 @@ const Footer = () => {
                 className="h-10 mb-4"
               />
               <p className="text-gray-300 leading-relaxed">
-                Somos una agencia de marketing digital especializada en ayudar a las empresas 
-                a alcanzar su máximo potencial en el mundo digital. Con metodologías innovadoras 
+                Somos una empresa especializada en networking, marketing digital y planeación financiera. 
+                Ayudamos a las empresas a alcanzar su máximo potencial a través de metodologías innovadoras 
                 y un equipo de expertos comprometidos con tu éxito.
               </p>
             </div>
