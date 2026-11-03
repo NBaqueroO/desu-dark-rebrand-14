@@ -1,4 +1,3 @@
-
 import { Instagram, Youtube, Linkedin } from "lucide-react";
 
 const Footer = () => {
@@ -10,7 +9,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="mb-6">
               <img 
-                src="/lovable-uploads/7a0ceaae-5c95-4828-92fe-bfc8d48f729f.png" 
+                src="/es/marketing/lovable-uploads/7a0ceaae-5c95-4828-92fe-bfc8d48f729f.png" 
                 alt="De Su Futuro" 
                 className="h-10 mb-4"
               />
@@ -29,7 +28,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="bg-gray-800 hover:bg-orange-500 p-3 rounded-lg transition-colors"
               >
-                <img src="/lovable-uploads/de9184b9-c3ba-4695-bc64-2352f978acfc.png" alt="Instagram" className="w-5 h-5" />
+                <img src="/es/marketing/lovable-uploads/de9184b9-c3ba-4695-bc64-2352f978acfc.png" alt="Instagram" className="w-5 h-5" />
               </a>
               <a
                 href="https://www.youtube.com/channel/UCjKej9TBPmAM5SC5ykpPCig"
@@ -37,7 +36,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="bg-gray-800 hover:bg-orange-500 p-3 rounded-lg transition-colors"
               >
-                <img src="/lovable-uploads/a87cf60f-929d-44c0-8d9c-2e03ed1f22f8.png" alt="YouTube" className="w-5 h-5" />
+                <img src="/es/marketing/lovable-uploads/a87cf60f-929d-44c0-8d9c-2e03ed1f22f8.png" alt="YouTube" className="w-5 h-5" />
               </a>
               <a
                 href="https://www.linkedin.com/company/desufuturo"
@@ -45,7 +44,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="bg-gray-800 hover:bg-orange-500 p-3 rounded-lg transition-colors"
               >
-                <img src="/lovable-uploads/81845d40-1a85-4c14-b99e-9080676203bc.png" alt="LinkedIn" className="w-5 h-5" />
+                <img src="/es/marketing/lovable-uploads/81845d40-1a85-4c14-b99e-9080676203bc.png" alt="LinkedIn" className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -123,14 +122,6 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">
               © 2024 De Su Futuro. Todos los derechos reservados.
             </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">
-                Política de Privacidad
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors">
-                Términos de Servicio
-              </a>
-            </div>
           </div>
         </div>
       </div>

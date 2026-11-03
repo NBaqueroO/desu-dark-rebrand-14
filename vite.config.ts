@@ -19,4 +19,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: '/es/marketing/', // Esto hará que los recursos se busquen en /es/marketing/assets/
 }));

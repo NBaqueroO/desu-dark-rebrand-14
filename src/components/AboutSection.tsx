@@ -1,4 +1,3 @@
-
 import { Users, Award, Lightbulb, TrendingUp } from "lucide-react";
 import CompanyCarousel from "./CompanyCarousel";
 
@@ -11,8 +10,7 @@ const AboutSection = () => {
             MARKETING
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 max-w-4xl mx-auto">
-            Todos nuestros trabajos son realizados a través de metodologías Design Thinking y Agile, 
-            somos expertos en planeación estratégica y modelos de negocios.
+            Nos sentamos a entender tu negocio y te damos una propuesta real para el crecimiento de tu negocio.
           </h2>
         </div>
 
@@ -38,24 +36,16 @@ const AboutSection = () => {
 
           {/* Content */}
           <div className="bg-gray-800 rounded-3xl p-8 border border-gray-700 shadow-lg">
-            <h3 className="text-2xl font-bold text-white mb-6">
-              Somos la única empresa en Colombia con línea especializada para la creación de contenido del sector petrolero
-            </h3>
             
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              (<span className="text-orange-500 font-semibold">Upstream, midstream y downstream</span>) ya que 
-              contamos con ingenieros de petróleos y ambientales.
-            </p>
-
             {/* Values */}
             <div className="grid grid-cols-2 gap-6">
+              {/* Nueva lista de estrategias */}
               <div className="flex items-start gap-3">
                 <div className="bg-orange-500/10 p-2 rounded-lg">
                   <Users className="w-6 h-6 text-orange-500" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-1">Equipo Especializado</h4>
-                  <p className="text-gray-400 text-sm">Ingenieros expertos</p>
+                  <h4 className="font-semibold text-white mb-1">Estrategias enfocadas en generación de prospectos (leads)</h4>
                 </div>
               </div>
 
@@ -64,8 +54,7 @@ const AboutSection = () => {
                   <Award className="w-6 h-6 text-orange-500" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-1">Metodologías</h4>
-                  <p className="text-gray-400 text-sm">Design Thinking & Agile</p>
+                  <h4 className="font-semibold text-white mb-1">Email Marketing y Mensajeria por Whatsapp</h4>
                 </div>
               </div>
 
@@ -74,8 +63,7 @@ const AboutSection = () => {
                   <Lightbulb className="w-6 h-6 text-orange-500" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-1">Innovación</h4>
-                  <p className="text-gray-400 text-sm">Contenido especializado</p>
+                  <h4 className="font-semibold text-white mb-1">Creación y gestión de contenido corporativo.</h4>
                 </div>
               </div>
 
@@ -84,8 +72,34 @@ const AboutSection = () => {
                   <TrendingUp className="w-6 h-6 text-orange-500" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-1">Estrategia</h4>
-                  <p className="text-gray-400 text-sm">Modelos de negocio</p>
+                  <h4 className="font-semibold text-white mb-1">Eventos empresariales y networking estratégico.</h4>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="bg-orange-500/10 p-2 rounded-lg">
+                  <Users className="w-6 h-6 text-orange-500" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Marketing de influencers en el sector corporativo.</h4>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="bg-orange-500/10 p-2 rounded-lg">
+                  <Award className="w-6 h-6 text-orange-500" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Posicionamiento B2B.</h4>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="bg-orange-500/10 p-2 rounded-lg">
+                  <Lightbulb className="w-6 h-6 text-orange-500" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Medición, análisis y optimización de resultados.</h4>
                 </div>
               </div>
             </div>
@@ -118,7 +132,7 @@ const AboutSection = () => {
 
           <div className="bg-gray-800 rounded-3xl p-4 border border-gray-700 shadow-lg relative overflow-hidden">
             <img 
-              src="/lovable-uploads/8cc66fce-7ef7-4c4b-8969-e8a2a30a0803.png" 
+              src="/es/marketing/lovable-uploads/8cc66fce-7ef7-4c4b-8969-e8a2a30a0803.png" 
               alt="Objetivos de Desarrollo Sostenible - ODS 4, 5, 8, 10, 17" 
               className="w-full h-auto rounded-lg"
             />
